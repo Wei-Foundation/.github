@@ -1,11 +1,26 @@
 # Wei-Foundation
 
-We are a dedicated team maintaining and advancing the Wei-Toolchain project.
+Wei-Foundation 是一个专注于底层编程语言与编译器架构的开源组织。我们致力于探索系统级软件的性能极限，并推动底层工具链的技术演进。
 
-**Our Mission:**
-- Develop the Wei 27 programming language.
-- Maintain the Wei-Toolchain compiler toolchain.
-- Promote high-performance, open-source programming language infrastructure.
+### 什么是维语言（Wei 27）？
 
-**Current Projects:**
-- [Wei-Toolchain](https://github.com/Wei-Foundation/Wei-Toolchain) - An open-source, cross-platform, high-performance compiler for Wei 27. Generates native x86-64 code without LLVM.
+维语言（Wei 27）是一门为极致控制与高性能而生的现代系统级静态编程语言。它面向模块化编程，在底层设计尤为突出（**摒弃了臃肿的面向对象逻辑**）。在多项核心性能测试中，其速度与安全性均超越了 C++（基于 C++26 -O3 标准）。
+它不依赖虚拟机，不妥协于臃肿的中间件。Wei 27 将现代语言特性与底层硬件的绝对控制权结合，内置极致的内存保护机制（如栈金丝雀与越界拦截），并原生支持中文、文言文与现代英文等多种源码方言。
+最关键的是，它**实现了完全自举**。这意味着 Wei 27 的编译器能够编译自身，彻底摆脱了对初始宿主语言的依赖。其背后，是一个将 AST 直接翻译为原生机器码的纯血后端引擎。
+
+我们不打算画大饼，Wei 27 仍有需要跨越的高山：
+在内存安全机制上，我们目前仍未超越 Rust 的极致严苛，以及 C++ 的生态，Rust和C++确实是非常优秀的编程语言，也向它们致敬！
+
+单打独斗不如群星璀璨，欢迎各位优秀的开发者加入 Wei-Foundation 星辰大海！
+
+---
+
+### 研发阵列：
+
+- **语言标准**：维护并演进 Wei 27 静态编程语言。
+- **后端开源生态**：提供完整的机器码发射、寄存器分配与内存保护机制的开源实现。
+- **系统基础设施**：围绕 MTG 构建跨平台（Windows / Linux）的原生底层工具链。
+
+### 开源项目：
+
+- **[mtg](https://github.com/Wei-Foundation/mtg)** - Wei 27 官方实现的高性能编译器的开源后端。该仓库包含了完整的 MTG 后端代码生成架构，将 AST 翻译为高性能原生机器码。
